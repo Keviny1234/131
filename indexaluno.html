@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html>
- <head>
-   <title>aluno</title>
-   
-   Primeira nota <input id="nota1" type="number"> <br />
-   Segunda  nota <input id="nota2" type="number"> <br />
-   
-   <button onclick="media()">Calcular Media</button>
 
-   <script type="text/javascript">
+<head>
+    <title>aluno</title>
 
-    function media(){
-     var nota1 = parseFloat(document.getElementById("nota1").value);
-     var nota2 = parseFloat(document.getElementById("nota2").value);
+<body>
+    <!-- Primeira nota <input id="nota1" type="number"> <br />
+   Segunda  nota <input id="nota2" type="number"> <br />-->
 
-     var media = (nota1 + nota2)/2 ;
+    <button onclick="media()">Calcular Media</button>
 
-     if(media >= 7)
-      if(media==10)
-       alert("Uau! Aprovado com sucesso");
-      else
-       alert("Parabens, aprovado! Media "+media);
-     else
-      alert("Reprovado!")
+    <div id="resposta"></div>
 
-    }
- </script>
+    <script>
 
- </head>
+        function media() {
+
+            let nome = (window.prompt(' Qual seu nome? '))
+            let nota1 = Number(window.prompt('Digite primeira nota: '))
+            let nota2 = Number(window.prompt('Digite segunda nota: '))
+            let resposta = window.document.getElementById("resposta")
+
+
+            var media = (nota1 + nota2) / 2;
+
+            if (media >= 7) {
+                resposta.innerHTML = `Uau! Aprovado com sucesso ${media}`
+            }
+            else {
+                resposta.innerHTML = `Reprovado nota ${media}! `
+            }
+        }
+    </script>
+</body>
+</head>
+
 </html>
