@@ -34,14 +34,14 @@
             resposta = document.getElementById('resposta');
 
             if (ano % 400 == 0) {
-                resposta.innerHTML = "É bissexto"
+                resposta.innerHTML = ` O ano ${ano} é bissexto `
             }
 
             else if (ano % 4 == 0 && ano % 100 != 0) {
-                resposta.innerHTML = "É bissexto"
+               resposta.innerHTML = ` O ano ${ano} é bissexto `
             }
             else {
-                resposta.innerHTML = "Não é bissexto"
+               resposta.innerHTML = ` O ano ${ano} não bissexto `
             }
             }
     </script>
