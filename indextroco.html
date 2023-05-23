@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculando o Troco</title>
+</head>
+
+<body>
+    <h1>Calculando o Troco</h1>
+
+    <button id="bt">
+        Comprar Produto
+    </button>
+
+    <script>
+let bt = document.getElementById('bt')
+
+bt.addEventListener('click', (event) => {
+    event.preventDefault()
+    let nome = prompt('Que produto que você está comprando?')
+    let n1 = Number(prompt(`Qual o valor de ${nome} ? `))
+    let n2 = Number(prompt(`Quanto dinheiro você deu para pagar ${nome} ? `))
+
+    let troco = n2 - n1
+
+    window.alert(`Você comprou ${nome} que custou R$ ${n1} \nDeu R$ ${n2} e vai receber R$ ${troco} de troco \nVolte sempre `)
+})
+        
+        
+    </script>
+</body>
+
+</html>

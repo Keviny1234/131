@@ -1,0 +1,28 @@
+<!DOCTYPE html> 
+ <html lang="en"> 
+ <head> 
+     <meta charset="UTF-8"> 
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <title>Boas vindas</title> 
+ </head> 
+ <body> 
+     <h1>Boas vindas</h1> 
+     <button onclick="inicio()">Inicie o desafio</button> 
+     <section id="resultado"></section> 
+
+     <select id="valor"></select>
+  
+     <script> 
+         function inicio() { 
+             let nome = window.prompt('Como você se chama?') 
+             let valor = window.prompt(`Olá ${nome}, qual sua idade?`)
+             let res = window.document.getElementById('resultado')
+             let number = window.document.getElementById('valor') 
+            res.innerHTML = (`<p>Acabei de conhecer, <strong>${nome}</strong>, que tem ${valor}, anos de idade!`) 
+               
+         } 
+     </script> 
+      
+ </body> 
+ </html>
